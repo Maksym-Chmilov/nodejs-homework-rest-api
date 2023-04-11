@@ -3,12 +3,12 @@ const app = require("../app");
 const request = require("supertest");
 require("dotenv").config();
 
-const { DB_HOST} = process.env;
+const { DB_HOST } = process.env;
 mongoose.set("strictQuery", true);
 
 describe("login controller", () => {
   beforeAll(() => {
-   return mongoose.connect(DB_HOST);
+    return mongoose.connect(DB_HOST);
   });
 
   const credentials = {
